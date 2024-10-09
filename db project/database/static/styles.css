@@ -1,0 +1,372 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: #bacbea;
+    color: rgb(58, 58, 58);
+    padding: 20px;
+    margin: 0;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+th, td {
+    border: 1px solid #000000;
+    padding: 8px;
+}
+
+th {
+    background-color: #5f83c2;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+a {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #4953c2;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: #98367f;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 17px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4caf7f;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 6px #999;
+    margin: 5px;
+}
+
+.button:hover {
+    background-color: #3e8e41;
+}
+
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 3px #666;
+    transform: translateY(2px);
+}
+
+.button-delete {
+    background-color: #f44336; /* Red */
+}
+
+.button-delete:hover {
+    background-color: #da190b;
+}
+
+.button-delete:active {
+    background-color: #da190b;
+}
+
+.button-edit {
+    background-color: #008CBA; /* Blue */
+}
+
+.button-edit:hover {
+    background-color: #007bb5;
+}
+
+.button-edit:active {
+    background-color: #007bb5;
+}
+
+.icon {
+    font-size: 20px;
+    cursor: pointer;
+    color: #4CAF50;
+}
+
+.icon:hover {
+    color: #3e8e41;
+}
+
+/* Centering content and styling for new tabs */
+.new-tab-body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.new-tab-h1 {
+    background-color: #bacbea;
+    color: rgb(58, 58, 58);
+    padding: 20px;
+    margin: 0;
+}
+
+.new-tab-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+.new-tab-th, .new-tab-td {
+    border: 1px solid #000000;
+    padding: 8px;
+}
+
+.new-tab-th {
+    background-color: #5f83c2;
+    color: white;
+}
+
+.new-tab-tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.new-tab-tr:hover {
+    background-color: #ddd;
+}
+
+.new-tab-a {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #4953c2;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.new-tab-a:hover {
+    background-color: #98367f;
+}
+
+/* Centering content for new form pages */
+.form-page-body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.form-page-container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-page-h1 {
+    background-color: #bacbea;
+    color: rgb(58, 58, 58);
+    padding: 20px;
+    margin: 0;
+    border-radius: 8px 8px 0 0;
+}
+
+.form-page-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-page-label {
+    margin: 10px 0;
+}
+
+.form-page-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-page-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 6px #999;
+    margin: 5px;
+}
+
+.form-page-button:hover {
+    background-color: #3e8e41;
+}
+
+.form-page-button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 3px #666;
+    transform: translateY(2px);
+}
+
+.form-page-back {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4953c2;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.form-page-back:hover {
+    background-color: #98367f;
+}
+
+/* Centering content for edit form pages */
+.edit-page-body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.edit-page-container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.edit-page-h1 {
+    background-color: #bacbea;
+    color: rgb(58, 58, 58);
+    padding: 20px;
+    margin: 0;
+    border-radius: 8px 8px 0 0;
+}
+
+.edit-page-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.edit-page-label {
+    margin: 10px 0;
+}
+
+.edit-page-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.edit-page-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 6px #999;
+    margin: 5px;
+}
+
+.edit-page-button:hover {
+    background-color: #3e8e41;
+}
+
+.edit-page-button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 3px #666;
+    transform: translateY(2px);
+}
+
+.edit-page-back {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4953c2;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.edit-page-back:hover {
+    background-color: #98367f;
+}
+.aggregated-data-container {
+    width: 40%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 8px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.aggregated-data-container h2 {
+    margin-top: 0;
+    font-size: 30px;
+    color: #af4c7a;
+}
+
+.aggregated-data {
+    font-size: 25px;
+}
+
+.aggregated-value {
+    margin-bottom: 10px;
+}
+
+.blue-text {
+    color: blue;
+    font-size: 27px;
+    font-weight: bold;
+}
+.lightblue-text{
+    color: #0fcdef;
+    font-size: 30px;
+    font-weight: bold;
+}

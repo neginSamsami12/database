@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>Left Join Employment Questionnaires with Dependents</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1> Employment Questionnaires with Dependents</h1>
+    <table border="1">
+        <tr>
+            <th>Questionnaire ID</th>
+            <th>Personal Information</th>
+            <th>Job Requested</th>
+            <th>Dependent Full Name</th>
+            <th>Dependent Relationship</th>
+            <th>Dependent Gender</th>
+        </tr>
+        {% for record in records %}
+        <tr>
+            <td>{{ record[0] }}</td>
+            <td>{{ record[1] }}</td>
+            <td>{{ record[2] }}</td>
+            <td>{{ record[3] }}</td>
+            <td>{{ record[4] }}</td>
+            <td>{{ record[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">بازگشت به صفحه اصلی</a>
+</body>
+</html>

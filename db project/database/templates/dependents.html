@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>Dependents</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="new-tab-body">
+    <h1 class="new-tab-h1">Dependents</h1>
+    <table class="new-tab-table">
+        <tr class="new-tab-tr">
+            <th class="new-tab-th">Questionnaire ID</th>
+            <th class="new-tab-th">Full Name</th>
+            <th class="new-tab-th">Gender</th>
+            <th class="new-tab-th">Relationship</th>
+            <th class="new-tab-th">Birth Date</th>
+            <th class="new-tab-th">Education Level</th>
+            <th class="new-tab-th">Job</th>
+            <th class="new-tab-th">Actions</th>
+        </tr>
+        {% for row in records %}
+        <tr class="new-tab-tr">
+            <td class="new-tab-td">{{ row[0] }}</td>
+            <td class="new-tab-td">{{ row[1] }}</td>
+            <td class="new-tab-td">{{ row[2] }}</td>
+            <td class="new-tab-td">{{ row[3] }}</td>
+            <td class="new-tab-td">{{ row[4] }}</td>
+            <td class="new-tab-td">{{ row[5] }}</td>
+            <td class="new-tab-td">{{ row[6] }}</td>
+            <td class="new-tab-td">
+                <a class="button button-edit" href="{{ url_for('update_dependent') }}?questionnaire_id={{ row[0] }}" target="_blank">ویرایش</a>
+                <form action="{{ url_for('delete_dependent') }}" method="POST" style="display:inline;">
+                    <input type="hidden" name="questionnaire_id" value="{{ row[0] }}">
+                    <button type="submit" class="button button-delete">حذف</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a class="new-tab-a" href="{{ url_for('insert_dependent') }}" target="_blank">افزودن اطلاعات جدید</a>
+    <a class="form-page-back" href="/">بازگشت به صفحه اصلی</a>
+</body>
+</html>

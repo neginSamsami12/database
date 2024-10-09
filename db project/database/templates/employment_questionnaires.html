@@ -1,0 +1,45 @@
+<table>
+    <thead>
+        <tr>
+            <th>Questionnaire ID</th>
+            <th>Photo</th>
+            <th>Personal Information</th>
+            <th>Medical History Code</th>
+            <th>Detention Code</th>
+            <th>Educational Background</th>
+            <th>Technical Courses</th>
+            <th>Salary Code</th>
+            <th>Job Requested</th>
+            <th>Work Experience</th>
+            <th>Insurance and Benefits</th>
+            <th>Relatives Information</th>
+            <th>Reason for Leaving Previous Job</th>
+            <th>Residential Address</th>
+            <th>Cooperation Number</th>
+            <th>Dependents</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for record in records %}
+        <tr>
+            <td>{{ record[0] }}</td>
+            <td>{{ record[1] }}</td>
+            <td>{{ record[2] }}</td>
+            <td>{{ record[3] }}</td>
+            <td>{{ record[4] }}</td>
+            <td>{{ record[5] }}</td>
+            <td>{{ record[6] }}</td>
+            <td>{{ record[7] }}</td>
+            <td>{{ record[8] }}</td>
+            <td>{{ record[9] }}</td>
+            <td>{{ record[10] }}</td>
+            <td>{{ record[11] }}</td>
+            <td>{{ record[12] }}</td>
+            <td>{{ record[13] }}</td>
+            <td>{{ record[14] }}</td>
+            <td>{{ record[15] }}</td>
+
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

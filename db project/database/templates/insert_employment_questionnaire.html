@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>افزودن اطلاعات جدید</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="form-page-body">
+    <div class="form-page-container">
+        <h1 class="form-page-h1">افزودن اطلاعات جدید</h1>
+        <form method="POST" class="form-page-form">
+            <label for="questionnaire_id" class="form-page-label">Questionnaire ID:</label>
+            <input type="text" id="questionnaire_id" name="questionnaire_id" class="form-page-input" required><br>
+
+            <label for="PersonalInformation" class="form-page-label">Personal Information:</label>
+            <input type="text" id="PersonalInformation" name="PersonalInformation" class="form-page-input" required><br>
+
+            <label for="medical_history_code" class="form-page-label">Medical History Code:</label>
+            <input type="text" id="medical_history_code" name="medical_history_code" class="form-page-input" required><br>
+
+            <label for="detention_code" class="form-page-label">Detention Code:</label>
+            <input type="text" id="detention_code" name="detention_code" class="form-page-input" required><br>
+
+            <label for="EducationalBackground" class="form-page-label">Educational Background:</label>
+            <input type="text" id="EducationalBackground" name="EducationalBackground" class="form-page-input" required><br>
+
+            <label for="TechnicalCourses" class="form-page-label">Technical Courses:</label>
+            <input type="text" id="TechnicalCourses" name="TechnicalCourses" class="form-page-input" required><br>
+
+            <label for="salary_code" class="form-page-label">Salary Code:</label>
+            <input type="text" id="salary_code" name="salary_code" class="form-page-input" required><br>
+
+            <label for="job_requested" class="form-page-label">Job Requested:</label>
+            <input type="text" id="job_requested" name="job_requested" class="form-page-input" required><br>
+
+            <label for="WorkExperience" class="form-page-label">Work Experience:</label>
+            <input type="text" id="WorkExperience" name="WorkExperience" class="form-page-input" required><br>
+
+            <label for="insurance_and_benefits" class="form-page-label">Insurance and Benefits:</label>
+            <input type="text" id="insurance_and_benefits" name="insurance_and_benefits" class="form-page-input" required><br>
+
+            <label for="RelativesInformation" class="form-page-label">Relatives Information:</label>
+            <input type="text" id="RelativesInformation" name="RelativesInformation" class="form-page-input" required><br>
+
+            <label for="reason_for_leaving_previous_job" class="form-page-label">Reason for Leaving Previous Job:</label>
+            <input type="text" id="reason_for_leaving_previous_job" name="reason_for_leaving_previous_job" class="form-page-input" required><br>
+
+            <label for="ResidentialAddress" class="form-page-label">Residential Address:</label>
+            <input type="text" id="ResidentialAddress" name="ResidentialAddress" class="form-page-input" required><br>
+
+            <label for="cooperation_number" class="form-page-label">Cooperation Number:</label>
+            <input type="text" id="cooperation_number" name="cooperation_number" class="form-page-input" required><br>
+
+            <label for="Dependents" class="form-page-label">Dependents:</label>
+            <input type="text" id="Dependents" name="Dependents" class="form-page-input" required><br>
+
+            <button type="submit" class="form-page-button">افزودن</button>
+        </form>
+        <a class="form-page-back" href="/">بازگشت به صفحه اصلی</a>
+    </div>
+</body>
+</html>

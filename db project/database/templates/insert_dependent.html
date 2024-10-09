@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>افزودن وابسته جدید</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="form-page-body">
+    <h1 class="form-page-h1">افزودن وابسته جدید</h1>
+    <div class="form-page-container">
+        <form class="form-page-form" method="post">
+            <label class="form-page-label" for="questionnaire_id">Questionnaire ID:</label>
+            <input class="form-page-input" type="text" id="questionnaire_id" name="questionnaire_id"><br>
+            <label class="form-page-label" for="full_name">Full Name:</label>
+            <input class="form-page-input" type="text" id="full_name" name="full_name"><br>
+            <label class="form-page-label" for="gender">Gender:</label>
+            <input class="form-page-input" type="text" id="gender" name="gender"><br>
+            <label class="form-page-label" for="relationship">Relationship:</label>
+            <input class="form-page-input" type="text" id="relationship" name="relationship"><br>
+            <label class="form-page-label" for="birth_date">Birth Date:</label>
+            <input class="form-page-input" type="text" id="birth_date" name="birth_date"><br>
+            <label class="form-page-label" for="education_level">Education Level:</label>
+            <input class="form-page-input" type="text" id="education_level" name="education_level"><br>
+            <label class="form-page-label" for="job">Job:</label>
+            <input class="form-page-input" type="text" id="job" name="job"><br>
+            <input class="form-page-button" type="submit" value="ثبت اطلاعات">
+        </form>
+        <a class="form-page-back" href="/dependents">بازگشت به لیست وابستگان</a>
+    </div>
+</body>
+</html>

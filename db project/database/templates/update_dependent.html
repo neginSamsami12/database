@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>ویرایش وابسته</title>
+    <link rel="stylesheet" href="/static/styles.css"> <!-- لینک به فایل CSS جداگانه -->
+</head>
+<body class="edit-page-body">
+    <div class="edit-page-container">
+        <h1 class="edit-page-h1">ویرایش وابسته</h1>
+        <form class="edit-page-form" method="POST">
+            <label class="edit-page-label" for="questionnaire_id">Questionnaire ID:</label>
+            <input class="edit-page-input" type="text" id="questionnaire_id" name="questionnaire_id" value="{{ record[0] }}" readonly><br>
+            <label class="edit-page-label" for="full_name">Full Name:</label>
+            <input class="edit-page-input" type="text" id="full_name" name="full_name" value="{{ record[1] }}"><br>
+            <label class="edit-page-label" for="gender">Gender:</label>
+            <input class="edit-page-input" type="text" id="gender" name="gender" value="{{ record[2] }}"><br>
+            <label class="edit-page-label" for="relationship">Relationship:</label>
+            <input class="edit-page-input" type="text" id="relationship" name="relationship" value="{{ record[3] }}"><br>
+            <label class="edit-page-label" for="birth_date">Birth Date:</label>
+            <input class="edit-page-input" type="text" id="birth_date" name="birth_date" value="{{ record[4] }}"><br>
+            <label class="edit-page-label" for="education_level">Education Level:</label>
+            <input class="edit-page-input" type="text" id="education_level" name="education_level" value="{{ record[5] }}"><br>
+            <label class="edit-page-label" for="job">Job:</label>
+            <input class="edit-page-input" type="text" id="job" name="job" value="{{ record[6] }}"><br>
+            <input class="edit-page-button" type="submit" value="ذخیره تغییرات">
+        </form>
+        <a class="edit-page-back" href="/dependents">بازگشت به لیست وابستگان</a>
+    </div>
+</body>
+</html>

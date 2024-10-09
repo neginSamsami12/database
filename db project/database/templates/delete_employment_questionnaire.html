@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>حذف پرسشنامه شغلی</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>حذف پرسشنامه شغلی</h1>
+    <form method="POST">
+        <input type="hidden" name="questionnaire_id" value="{{ record[0] }}">
+        <p>پرسشنامه شغلی با شناسه {{ record[0] }} حذف خواهد شد.</p>
+        <button type="submit">حذف</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Dependent</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body class="form-page-body">
+    <div class="form-page-container">
+        <h1 class="form-page-h1">حذف وابسته</h1>
+        <p>آیا مطمئن هستید که می‌خواهید وابسته با Questionnaire ID: {{ questionnaire_id }} را حذف کنید؟</p>
+        <form method="POST" action="/delete_dependent">
+            <input type="hidden" name="questionnaire_id" value="{{ questionnaire_id }}">
+            <input class="form-page-button" type="submit" value="حذف">
+        </form>
+        <a class="form-page-back" href="/dependents">بازگشت به لیست وابستگان</a>
+    </div>
+</body>
+</html>

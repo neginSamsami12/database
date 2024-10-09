@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>صفحه اصلی</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script>
+        function confirmDelete(questionnaireId) {
+            if (confirm("آیا مطمئن هستید که می‌خواهید این پرسشنامه شغلی را حذف کنید؟")) {
+                window.location.href = "/delete_employment_questionnaire?id=" + questionnaireId;
+            }
+        }
+
+        function viewDependents(questionnaireId) {
+            window.location.href = "/dependents?questionnaire_id=" + questionnaireId;
+        }
+    </script>
+</head>
+<body>
+    <h1>نمایش اطلاعات پرسشنامه‌های شغلی</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Questionnaire ID</th>
+                <th>Photo</th>
+                <th>Personal Information</th>
+                <th>Medical History Code</th>
+                <th>Detention Code</th>
+                <th>Educational Background</th>
+                <th>Technical Courses</th>
+                <th>Salary Code</th>
+                <th>Job Requested</th>
+                <th>Work Experience</th>
+                <th>Insurance and Benefits</th>
+                <th>Relatives Information</th>
+                <th>Reason for Leaving Previous Job</th>
+                <th>Residential Address</th>
+                <th>Cooperation Number</th>
+                <th>Dependents</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in records %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+                <td>{{ row[5] }}</td>
+                <td>{{ row[6] }}</td>
+                <td>{{ row[7] }}</td>
+                <td>{{ row[8] }}</td>
+                <td>{{ row[9] }}</td>
+                <td>{{ row[10] }}</td>
+                <td>{{ row[11] }}</td>
+                <td>{{ row[12] }}</td>
+                <td>{{ row[13] }}</td>
+                <td>{{ row[14] }}</td>
+                <td>
+                    <i class="fas fa-user icon" onclick="viewDependents('{{ row[0] }}')"></i>
+                </td>
+                <td>
+                    <a href="/update_employment_questionnaire?id={{ row[0] }}" target="_blank" class="button button-edit">ویرایش</a>
+                    <a href="#" onclick="confirmDelete('{{ row[0] }}')" class="button button-delete">حذف</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <button class="button" onclick="window.open('/insert_employment_questionnaire', '_blank')">افزودن اطلاعات جدید</button>
+    <br><br>
+    <a href="/join_employment_dependents">Employment with Dependents</a>
+    <a href="/left_join_employment_dependents">Employment with female Dependents</a>
+
+    <div class="aggregated-data-container">
+        <h2>داده‌های تجمیعی</h2>
+        <div class="aggregated-data">
+            <span class="aggregated-value"><span class="blue-text">مجموع مقادیر:</span> {{ aggregated_data[0] }}</span><br>
+            <span class="aggregated-value"><span class="blue-text">میانگین مقادیر:</span> {{ aggregated_data[1] }}</span><br>
+            <span class="aggregated-value"><span class="blue-text">بیشترین مقدار:</span> {{ aggregated_data[2] }}</span><br>
+            <span class="aggregated-value"><span class="blue-text">کمترین مقدار:</span> {{ aggregated_data[3] }}</span><br>
+            <span class="aggregated-value"><span class="lightblue-text">نتیجه محاسبه (Detention Code * Cooperation Number * Medical History Code * Salary Code):</span> {{ aggregated_data[4] }}</span>
+        </div>
+    </div>
+</body>
+</html>

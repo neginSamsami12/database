@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>ویرایش اطلاعات</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="edit-page-body">
+    <div class="edit-page-container">
+        <h1 class="edit-page-h1">ویرایش اطلاعات</h1>
+        <form method="POST" class="edit-page-form">
+            <label for="questionnaire_id" class="edit-page-label">Questionnaire ID:</label>
+            <input type="text" id="questionnaire_id" name="questionnaire_id" class="edit-page-input" value="{{ record[0] }}" required><br>
+
+            <label for="Photo" class="edit-page-label">Photo:</label>
+            <input type="text" id="Photo" name="Photo" class="edit-page-input" value="{{ record[1] }}" required><br>
+
+            <label for="PersonalInformation" class="edit-page-label">Personal Information:</label>
+            <input type="text" id="PersonalInformation" name="PersonalInformation" class="edit-page-input" value="{{ record[2] }}" required><br>
+
+            <label for="medical_history_code" class="edit-page-label">Medical History Code:</label>
+            <input type="text" id="medical_history_code" name="medical_history_code" class="edit-page-input" value="{{ record[3] }}" required><br>
+
+            <label for="detention_code" class="edit-page-label">Detention Code:</label>
+            <input type="text" id="detention_code" name="detention_code" class="edit-page-input" value="{{ record[4] }}" required><br>
+
+            <label for="EducationalBackground" class="edit-page-label">Educational Background:</label>
+            <input type="text" id="EducationalBackground" name="EducationalBackground" class="edit-page-input" value="{{ record[5] }}" required><br>
+
+            <label for="TechnicalCourses" class="edit-page-label">Technical Courses:</label>
+            <input type="text" id="TechnicalCourses" name="TechnicalCourses" class="edit-page-input" value="{{ record[6] }}" required><br>
+
+            <label for="salary_code" class="edit-page-label">Salary Code:</label>
+            <input type="text" id="salary_code" name="salary_code" class="edit-page-input" value="{{ record[7] }}" required><br>
+
+            <label for="job_requested" class="edit-page-label">Job Requested:</label>
+            <input type="text" id="job_requested" name="job_requested" class="edit-page-input" value="{{ record[8] }}" required><br>
+
+            <label for="WorkExperience" class="edit-page-label">Work Experience:</label>
+            <input type="text" id="WorkExperience" name="WorkExperience" class="edit-page-input" value="{{ record[9] }}" required><br>
+
+            <label for="insurance_and_benefits" class="edit-page-label">Insurance and Benefits:</label>
+            <input type="text" id="insurance_and_benefits" name="insurance_and_benefits" class="edit-page-input" value="{{ record[10] }}" required><br>
+
+            <label for="RelativesInformation" class="edit-page-label">Relatives Information:</label>
+            <input type="text" id="RelativesInformation" name="RelativesInformation" class="edit-page-input" value="{{ record[11] }}" required><br>
+
+            <label for="reason_for_leaving_previous_job" class="edit-page-label">Reason for Leaving Previous Job:</label>
+            <input type="text" id="reason_for_leaving_previous_job" name="reason_for_leaving_previous_job" class="edit-page-input" value="{{ record[12] }}" required><br>
+
+            <label for="ResidentialAddress" class="edit-page-label">Residential Address:</label>
+            <input type="text" id="ResidentialAddress" name="ResidentialAddress" class="edit-page-input" value="{{ record[13] }}" required><br>
+
+            <label for="cooperation_number" class="edit-page-label">Cooperation Number:</label>
+            <input type="text" id="cooperation_number" name="cooperation_number" class="edit-page-input" value="{{ record[14] }}" required><br>
+
+            <label for="Dependents" class="edit-page-label">Dependents:</label>
+            <input type="text" id="Dependents" name="Dependents" class="edit-page-input" value="{{ record[15] }}" required><br>
+
+            <button type="submit" class="edit-page-button">ذخیره تغییرات</button>
+        </form>
+        <a class="edit-page-back" href="/">بازگشت به صفحه اصلی</a>
+    </div>
+</body>
+</html>
